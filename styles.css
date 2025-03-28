@@ -26,15 +26,12 @@ input, button, textarea, select {
 }
 
 :root {
-    --txt-clr: #000000;
-    --bg-clr: #e0e0e0;
-    --form-clr: #fbfbfb;
-    --btn-clr: darkblue;
-    --link-clr: darkblue;
-    --light-txt-clr: #1f1f1f;
-    --brdr-clr-default: #E5E7EB;
-    --brdr-clr-invalid: red;
-    --brdr-clr-focus: blue;
+    --drk-blue: rgba(15, 27, 27, 1);
+    --btn-blue: rgb(14, 108, 120);
+    --btn-hover: rgb(24, 135, 150);
+    --btn-active: rgb(8, 76, 85);
+    --drk-blue-opacity: rgba(15, 27, 27, 0.9);
+    --grey: rgb(236, 239, 239);
 }
 
 /* Basic Structure */
@@ -43,6 +40,7 @@ body {
     -webkit-font-smoothing: antialiased;
     display: flex;
     height: 100vh;
+    color: var(--drk-blue);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -51,6 +49,7 @@ body {
 .left-section {
     flex: 3;
     background-image: url("./assets/imgs/bg-img.webp");
+    background-position: 0% 2%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -59,23 +58,23 @@ body {
 }
 
 .logo-section {
-    margin-top: 10rem;
-    background-color: rgba(15, 27, 27, 0.9);
+    margin-top: 25vh;
+    background-color: var(--drk-blue-opacity)
 }
 
-.logo-section > h1 {
+h1 {
     font-family: "ouroboros", sans-serif;
-    font-size: 4rem;
-    padding: 1.5rem 3rem;
+    font-size: 4.5rem;
+    padding: 1.5rem;
 }
 
 .credits-section {
-    background-color: rgba(15, 27, 27, 0.9);
+    background-color: var(--drk-blue-opacity)
 }
 
 .credits-section > p, 
 .credits-section > p > a {
-    color: rgb(227, 227, 227);
+    color: white;
     font-size: 0.9rem;
     margin: 1rem 0;
 } 
@@ -84,5 +83,107 @@ body {
 
 .right-section {
     flex: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--grey);
+    font-weight: 600;
+}
 
+.intro-text {
+    font-size: 1.3rem;
+    max-width: 60ch;
+    padding: 0 3rem;
+}
+
+.cta-text {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Form Section */
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+}
+
+.bg-section {
+    background-color: white;
+    padding: 2rem 3rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    margin-bottom: 0.4rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 2rem;
+}
+
+.form-item {
+    flex: 1;
+    max-width: 300px;
+    text-transform: uppercase;
+    color: #555556;
+    font-weight: 700;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    height: 2rem;
+    border: 0.4px solid var(--drk-blue);
+    border-radius: 4px;
+    padding: 8px;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid var(--btn-blue);
+}
+
+button {
+    background-color: var(--btn-blue);
+    color: white;
+    border: none;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    padding: 12px 32px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+button:hover {
+    background-color: var(--btn-hover);
+}
+
+button:active {
+    background-color: var(--btn-active);
+}
+
+.log-in {
+    margin-top: 2rem;
+    margin-left: 3rem;
+}
+
+.log-in > a {
+    color: var(--btn-blue);
+}
+
+.log-in > a:hover {
+    color: var(--btn-hover);
+}
+
+.log-in > a:active {
+    color: var(--btn-active);
 }

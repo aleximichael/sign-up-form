@@ -19,16 +19,54 @@
         </div>
     </div>
     <div class="right-section">
-        <p>This is not a real online service! You know you need something
-            like this in your life to help you realize your deepest dreams.
-            Sign up <em>now</em> to get started.
-        </p>
-        <p>You <em>know</em> you want to.</p>
-        <form action="">
-            <div class="input-section"></div>
-            <div class="button-section"></div>
+        <div class="intro-text">
+            <p>This is not a real online service! You know you need something
+                like this in your life to help you realize your deepest dreams.
+                Sign up <em>now</em> to get started.
+            </p>
+            <p class="cta-text">You <em>know</em> you want to.</p>
+        </div>
+        <form action="" method="get" class="form-section">
+            <div class="bg-section">
+                <h2>Let's Do This!</h2>
+                <div class="input-section">
+                    <div class="form-row">
+                        <div class="form-item">
+                            <label for="first-name">First Name</label>
+                            <input id="first-name" type="text" required>
+                        </div>
+                        <div class="form-item">
+                            <label for="last-name">Last Name</label>
+                            <input id="last-name" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-item">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" required>
+                        </div>
+                        <div class="form-item">
+                            <label for="tel-number">Phone Number</label>
+                            <input id="tel-number" type="tel" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-item">
+                            <label for="pwd">Password</label>
+                            <input id="pwd" type="password" required>
+                        </div>
+                        <div class="form-item">
+                            <label for="conf-pwd">Confirm Password</label>
+                            <input id="conf-pwd" type="password" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-section">
+                <button type="submit">Create Account</button>
+            </div>
         </form>
-        <p>Already have an account? <a href="#">Log in</a></p>
+        <p class="log-in">Already have an account? <a href="#">Log In</a></p>
     </div>
 </body>
 </html>
